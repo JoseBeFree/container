@@ -6,8 +6,8 @@
  * Time: 10:52 AM
  */
 
-namespace Josebefree\Container\Fecades;
-use Dreksoft\Container;
+namespace Josebefree\Container;
+use Josebefree\Container\Container;
 use Exception;
 
 abstract class Fecade

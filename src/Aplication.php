@@ -3,14 +3,13 @@
  * Created by PhpStorm.
  * User: DrekTop
  * Date: 19/01/2018
- * Time: 12:09 PM
+ * Time: 12:15 PM
  */
 
 namespace Josebefree\Container;
-
 use Josebefree\Container\Container;
 
-abstract class Provider
+class Aplication
 {
 
     public function __construct(Container $container)
@@ -18,6 +17,14 @@ abstract class Provider
         $this->container = $container;
     }
 
-    abstract public function register();
+    public function registerProviders(array $providers) {
+
+        foreach ($providers as $provider) {
+            $start = new $provider($this->container);
+            $start->register();
+        }
+
+    }
+
 
 }
