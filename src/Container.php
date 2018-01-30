@@ -15,6 +15,7 @@ use ReflectionException;
 class Container
 {
 
+    protected $nuevaraible;
     protected $bindings = [];
     protected $shared = [];
     protected static $instance;
